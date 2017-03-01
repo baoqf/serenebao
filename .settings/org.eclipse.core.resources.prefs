@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/org/swift/serenebao/dao/BaseCommonDAO.java=UTF-8
+encoding//src/org/swift/serenebao/dao/ColumnMeta.java=UTF-8
+encoding//src/org/swift/serenebao/dao/ConditionValue.java=UTF-8
+encoding//src/org/swift/serenebao/dao/FieldType.java=UTF-8
+encoding//src/org/swift/serenebao/dao/mysql/CommonDAO.java=UTF-8
+encoding//src/test/org/swift/entity/sqlserver/TestChild.java=UTF-8
+encoding/src=GBK

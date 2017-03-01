@@ -1,0 +1,1 @@
+1、sqlite:SQL logic error or missing database,原因是rs没关闭

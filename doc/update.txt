@@ -1,0 +1,56 @@
+2010-09-27 2.2.0
+	1、增加save批量数据
+	2、修改FileHandle类
+2010-08-01 2.1.0
+	1、增加sqlite数据库
+	2、修改update方法，防止rs不关
+2010-06-23 2.0.2
+	1.条件中增加不带DBConnect 的方法
+	2.条件中Query可以不用，直接带条件和值
+	3.增加getOneByQuery
+	4.整合了dbpool、uucommon和uuutil
+2008-09-17 1.2.4
+	1.Query中的条件去掉统一加where的功能
+	2.增加多主键或者多条件更新对象功能
+2007-12-22 1.2.3
+	1.Query中的条件统一加where，前面空格可有可无
+2007-09-22 1.2.2
+	1.增加获得数据库服务器当前时间Date getServerTime()
+2007-09-14 1.2.1
+	1.getRowCountBySql，getRowCount的sql没有转化为小写
+2007-08-23 1.2.0
+	1.增加sqlserver连接功能，注意打sp4补丁
+	2.修正读db.prop的错误
+2007-07-09 1.1.1
+	1.增加executeQuery()方法，允许调用者直接使用sql语句查询。
+	2.修正listPageBySql方法不返回分页数据的bug
+2007-07-03 1.1.0
+	1.重构CommonDAO类，从BaseCommonDAO继承，方便以后增加其它数据库。
+	2.重构插入和修改增个对象的内部实现，insert和update对象时，影响的字段为数据库和类的交集
+2007-06-30
+	1.增加oracle功能，注意使用备注方式为：
+		long型:@Column(type="number(20)",length="")
+		Date型:@Column(type="date",length="")
+		Boolean型:@Column(type="number(1)",length="")
+2007-06-08
+	1.分页直接加limit，而不用select * from (sql) a limit 1,15语句
+2007-06-01
+	1.修正不能使用字符串主键的问题
+2007-05-24
+	1.修正字段和属性顺序不一样时不能显示字段信息的问题
+2007-05-08
+	1.增加getOneRowColBySql的功能，允许统计一个任意类型的值
+	2.修正可以不使用赋值直接更新表 dao.update(new UpdateField("state=1","where id=1"))
+2007-05-07
+	1.增加了每张表都允许二级缓存
+2007-05-03
+	1.表字段可以不和类属性对应
+	2.类中允许加不属于表字段的属性和方法
+	3.增加Blob,Clob字段类型扩展
+	4.java和字段类型映射使用Class判断而不是String
+2007-04-27
+	1.重新整理了包结构
+	2.增加了多个anotation，表中允许增加备注，表类型innoDB等，编码类型等，字段增加默认值和备注
+	3.初始化表结构时增加了自动添加索引和外键
+	4.增加了一个DAO工厂不用new CommonDAO了。
+	5.多条件多个参数使用可变参数传入。

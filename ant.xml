@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<project name="serenebao" default="jar" basedir="." >  
+    <property name="base" value="."/>  
+    <property name="src.dir" value="src"/>  
+    <property name="class.dir" value="main/classes"/>  
+    <property name="target.dir" value="target"/>  
+      
+    <!--清理任务-->  
+    <target name="clean">  
+        <delete dir="target">  
+        </delete>  
+    </target>  
+      
+    <!--创建目录-->  
+    <target name="init" depends="clean">  
+        <mkdir dir="target"/>  
+    </target>  
+  
+    <!--将源代码打成jar包的形式-->  
+    <target name="jar" depends="init">  
+        <jar jarfile="${target.dir}/swift-serenebao-1.0.jar">  
+            <fileset dir="${class.dir}">
+		     <include name="**/*.class"/>
+		  	 <exclude name="test/" />
+		     </fileset>
+            <fileset dir="${src.dir}">
+		     <include name="**/*.java"/>
+		     <exclude name="test/" />
+		  </fileset>
+        </jar>  
+    </target>  
+</project> 
